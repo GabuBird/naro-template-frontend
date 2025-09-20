@@ -15,7 +15,7 @@ onMounted(async () => {
     <h1>Cities in {{ countryCode }}</h1>
     <ul v-if="cities">
       <li v-for="city in cities" :key="city.id">
-        <router-link :to="`/city/${city.name}`">{{ city.name }}</router-link>
+        <router-link :to="`/city/${city.name.String}`">{{ city.name.String }}</router-link>
       </li>
     </ul>
     <div v-else>都市が見つかりませんでした</div>

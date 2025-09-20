@@ -20,13 +20,15 @@ const routes = [
   {
     path: '/countries',
     name: 'countries',
-    component: CountryListPage
+    component: CountryListPage,
+    meta: { isPublic: true }
   },
   {
     path: '/countries/:countryCode/cities',
     name: 'cities-by-country',
     component: CityListPage,
-    props: true
+    props: true,
+    meta: { isPublic: true }
   },
   { path: '/:path(.*)*', component: NotFound, meta: { isPublic: true } }
 ]
