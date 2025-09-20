@@ -4,6 +4,8 @@ import NotFound from './pages/NotFound.vue'
 import PingPage from './pages/PingPage.vue'
 import LoginPage from './pages/LoginPage.vue'
 import CityPage from './pages/CityPage.vue'
+import CountryListPage from './pages/CountryListPage.vue'
+import CityListPage from './pages/CityListPage.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomePage, meta: { isPublic: true } },
@@ -15,6 +17,17 @@ const routes = [
     meta: { isPublic: true }
   },
   { path: '/city/:cityName', name: 'city', component: CityPage, props: true },
+  {
+    path: '/countries',
+    name: 'countries',
+    component: CountryListPage
+  },
+  {
+    path: '/countries/:countryCode/cities',
+    name: 'cities-by-country',
+    component: CityListPage,
+    props: true
+  },
   { path: '/:path(.*)*', component: NotFound, meta: { isPublic: true } }
 ]
 
