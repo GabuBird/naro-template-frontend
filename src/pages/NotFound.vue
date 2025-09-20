@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <header>
     <h1>Not Found {{ $route.path }}</h1>
